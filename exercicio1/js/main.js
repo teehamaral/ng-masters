@@ -19,15 +19,15 @@ function buscarasissues(){
 		var table = $('#issues');
 		var list = '<tr>';
 		list += '<td>' + item.title + '</td>';
-		list += '<td> <a target="_blank" href="' + item.url + '">' + item.url + ' </a> </td>';
+		list += '<td> <a target="_blank" href="' + item.html_url + '">' + item.html_url + ' </a> </td>';
 		list += '<td>' + item.state + '</td>';
 		list += '</tr>';
 		table.append(list);
 	}
 
 	function limpa_tabela(){
-		var list = $('#issues tr');
-		list.remove();
+		var item_list = $('#issues tr');
+		item_list.remove();
 	}
 
 	var user = $('#user').val();
