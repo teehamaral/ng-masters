@@ -35,5 +35,4 @@ function buscarissues(){
 	
 	var le_repo = GithubRepo(user, repositorio);
 	le_repo.buscar_issues();
-	le_repo.popular_tabela();
 }
