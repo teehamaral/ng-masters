@@ -2,31 +2,17 @@ function buscarissues(){
 	
 	function GithubRepo(username, reponame){
 		var url = 'https://api.github.com/repos/' + username + '/' + reponame + '/issues';
-		var itens = [];
-		var issue = {
+		var githubrepo = {
 			'buscar_issues': function(){
 				$.get(url).success(function(result){
 					limpa_tabela();
 					for (r in result){
 						popular_tabela(result[r]);
-						// itens.push(result[r]);
 					}
 				});
 			},
-			// 'popular_tabela': function(){
-			// 	var table = $('#issues');
-			// 	for (i in itens){
-			// 		var list = '';
-			// 		list += '<tr>';
-			// 		list += '<td>' + itens[i].title + '</td>';
-			// 		list += '<td> <a target="_blank" href="' + itens[i].html_url + '">' + itens[i].html_url + ' </a> </td>';
-			// 		list += '<td>' + itens[i].state + '</td>';
-			// 		list += '</tr>';
-			// 	}
-			// 	table.html(list).show();
-			// }
 		}
-		return issue;
+		return githubrepo;
 	}
 
 	function popular_tabela(item){
@@ -49,5 +35,5 @@ function buscarissues(){
 	
 	var le_repo = GithubRepo(user, repositorio);
 	le_repo.buscar_issues();
-	// le_repo.popular_tabela();
+	le_repo.popular_tabela();
 }
