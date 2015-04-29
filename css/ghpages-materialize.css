@@ -6798,9 +6798,9 @@ select {
       left: auto; } }
 
 .side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active {
-  background-color: #000000; }
+  background-color: #ef9a9a; }
   .side-nav .collapsible-body li.active a, .side-nav.fixed .collapsible-body li.active a {
-    color: #fff; }
+    color: #000; }
 
 #sidenav-overlay {
   position: fixed;
