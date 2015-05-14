@@ -32,8 +32,9 @@ angular.module('model').factory('issuesModel', function(apiGIT){
 
     issues.get_issues = function(){
         issues.loading = true;
-        var url = 'https://api.github.com/repos/freedomsponsors/www.freedomsponsors.org/issues';
-    	apiGIT.load(url).success(function(result){
+        user = 'freedomsponsors';
+        repository = 'www.freedomsponsors.org';
+    	apiGIT.load(user, repository).success(function(result){
     		issues.loading = false;
     		issues.issues = result;
     	});
