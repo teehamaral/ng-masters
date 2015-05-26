@@ -1,6 +1,6 @@
 angular.module('myalerts', ['popup']);
 
-angular.module('myalerts').factory('MyAlerts', function($timeout){
+angular.module('myalerts').factory('MyAlerts', function(){
 	var alert = {
 		popup: null,
 		alert: null,
