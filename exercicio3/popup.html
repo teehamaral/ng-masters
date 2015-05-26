@@ -1,0 +1,13 @@
+<div ng-show="visible">
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4>{[{ titulo }]}</h4>
+            <p ng-transclude></p>
+        </div>
+        <div class="modal-footer">
+            <a href="" ng-click="close()" class="modal-action modal-close waves-effect waves-green btn-flat">
+                <i class="mdi-navigation-close"></i> Fechar
+            </a>
+        </div>
+    </div>
+</div>
